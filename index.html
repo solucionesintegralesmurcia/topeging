@@ -1,1 +1,1332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="description" content="Todo sobre la pesca de calamares. Poteras artesanas, material recomendado y ropa personalizada.">
+<meta name="keywords" content="eging, pesca de calamares, poteras, señuelos, pesca nocturna">
+<meta name="author" content="EGING">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>EGING | Pesca de calamares, poteras y material recomendado</title>
+  <meta name="description" content="EGING: poteras artesanas by NEKO LURES, ropa personalizada, material recomendado y guías reales sobre pesca de calamares." />
+  <style>
+    :root{
+      --bg:#071018;
+      --bg-2:#0b1621;
+      --bg-3:#0f1e2c;
+      --card:#0e1822;
+      --card-2:#122131;
+      --line:rgba(255,255,255,.08);
+      --line-strong:rgba(0,201,167,.28);
+      --text:#eef6ff;
+      --text-soft:#b7c7d8;
+      --text-muted:#8ea2b7;
+      --accent:#00c9a7;
+      --accent-2:#5eead4;
+      --danger:#ef4444;
+      --warning:#f59e0b;
+      --shadow:0 24px 50px rgba(0,0,0,.30);
+      --radius:22px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 15% 10%, rgba(0,201,167,.12), transparent 24%),
+        radial-gradient(circle at 85% 18%, rgba(94,234,212,.07), transparent 18%),
+        linear-gradient(180deg, #061018 0%, #08131d 40%, #09131c 100%);
+      line-height:1.6;
+    }
+
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(var(--max), calc(100% - 32px));margin:auto}
+    .section{padding:88px 0}
+    .muted{color:var(--text-soft)}
+    .small{font-size:.92rem;color:var(--text-muted)}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 20px;
+      border-radius:999px;
+      border:1px solid transparent;
+      font-weight:700;
+      transition:.2s ease;
+      cursor:pointer;
+      min-height:48px;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{
+      background:linear-gradient(135deg, var(--accent), #39d3ff);
+      color:#05211c;
+      box-shadow:0 12px 28px rgba(0,201,167,.18);
+    }
+    .btn-outline{
+      border-color:rgba(255,255,255,.12);
+      color:var(--text);
+      background:rgba(255,255,255,.02);
+    }
+    .btn-outline:hover{
+      background:rgba(255,255,255,.04);
+      border-color:rgba(255,255,255,.18);
+    }
+    .btn-ghost{
+      color:var(--accent-2);
+      border-color:rgba(0,201,167,.18);
+      background:rgba(0,201,167,.05);
+    }
+
+    .section-label{
+      display:inline-block;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:.78rem;
+      font-weight:800;
+      color:var(--accent-2);
+      margin-bottom:14px;
+    }
+    .section-title{
+      font-size:clamp(2rem, 5vw, 3.8rem);
+      line-height:1.02;
+      letter-spacing:-.03em;
+      margin:0 0 14px;
+    }
+    .section-subtitle{
+      max-width:760px;
+      color:var(--text-soft);
+      font-size:1.05rem;
+      margin:0;
+    }
+
+    /* Header */
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(6,12,18,.76);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .header-inner{
+      min-height:74px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+    .header-logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:900;
+      letter-spacing:.08em;
+      color:var(--text);
+      white-space:nowrap;
+    }
+    .logo-badge{
+      width:40px;
+      height:40px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, var(--accent), #39d3ff);
+      color:#05211c;
+      font-weight:900;
+      box-shadow:0 10px 24px rgba(0,201,167,.18);
+    }
+    .header-nav{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .nav-link{
+      color:var(--text-soft);
+      font-size:.96rem;
+      font-weight:700;
+    }
+    .nav-link:hover{color:var(--text)}
+    .mobile-menu-btn{
+      display:none;
+      width:46px;
+      height:46px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03);
+      cursor:pointer;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      gap:5px;
+    }
+    .mobile-menu-btn span{
+      width:18px;
+      height:2px;
+      border-radius:2px;
+      background:#fff;
+      display:block;
+    }
+    .mobile-menu{
+      display:none;
+      border-top:1px solid rgba(255,255,255,.06);
+      background:#08131d;
+      padding:18px 16px 22px;
+    }
+    .mobile-menu.open{display:block}
+    .mobile-nav-link{
+      display:block;
+      padding:12px 4px;
+      font-weight:700;
+      color:var(--text-soft);
+      border-bottom:1px solid rgba(255,255,255,.05);
+    }
+
+    /* Hero */
+    .hero-section{
+      position:relative;
+      overflow:hidden;
+      padding:84px 0 50px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:28px;
+      align-items:center;
+    }
+    .hero-card{
+      position:relative;
+      min-height:560px;
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:30px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      background:
+        linear-gradient(180deg, rgba(4,10,15,.28), rgba(4,10,15,.78)),
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+    }
+    .hero-overlay{
+      position:absolute;
+      inset:auto 0 0 0;
+      padding:28px;
+      display:grid;
+      gap:14px;
+    }
+    .hero-badge{
+      position:absolute;
+      top:18px;
+      left:18px;
+      background:rgba(6,12,18,.72);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:999px;
+      padding:10px 14px;
+      font-size:.84rem;
+      font-weight:800;
+      color:var(--text);
+    }
+    .hero-panel{
+      background:rgba(7,16,24,.78);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:20px;
+      padding:16px 18px;
+    }
+    .hero-panel strong{
+      display:block;
+      color:var(--accent-2);
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      font-size:.76rem;
+      margin-bottom:6px;
+    }
+    .hero-panel p{
+      margin:0;
+      color:#dbe9f6;
+      font-size:.95rem;
+    }
+    .hero-copy .section-label{margin-bottom:18px}
+    .hero-copy .section-title{margin-bottom:18px}
+    .hero-copy .section-subtitle{margin-bottom:26px}
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-bottom:28px;
+    }
+    .hero-stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+    .stat{
+      border-radius:18px;
+      padding:18px;
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:var(--shadow);
+    }
+    .stat strong{
+      display:block;
+      font-size:1.35rem;
+      margin-bottom:4px;
+    }
+    .stat span{
+      color:var(--text-muted);
+      font-size:.92rem;
+    }
+
+    /* Generic cards */
+    .section-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:20px;
+      margin-bottom:28px;
+    }
+    .grid-4{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .card-body{padding:22px}
+    .card h3{margin:0 0 10px;font-size:1.18rem}
+    .card p{margin:0;color:var(--text-soft)}
+    .number{
+      width:42px;height:42px;border-radius:12px;
+      display:grid;place-items:center;
+      background:rgba(0,201,167,.10);
+      color:var(--accent-2);
+      font-weight:900;
+      margin-bottom:16px;
+    }
+
+    /* Product */
+    .product-media{
+      aspect-ratio:4/3;
+      background:linear-gradient(180deg, #0b1620, #0d1c29);
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .product-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .product-tag{
+      position:absolute;
+      top:14px;
+      left:14px;
+      border-radius:999px;
+      padding:8px 11px;
+      font-size:.76rem;
+      font-weight:800;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(6,12,18,.80);
+      color:#fff;
+    }
+    .tag-new{background:rgba(30,64,175,.24)}
+    .tag-limited{background:rgba(212,43,58,.20)}
+    .placeholder-svg{
+      width:62%;
+      max-width:200px;
+      opacity:.9;
+    }
+    .product-footer{
+      margin-top:14px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    /* Apparel */
+    .apparel-placeholder{
+      width:55%;
+      max-width:180px;
+      opacity:.72;
+    }
+
+    /* Material cards */
+    .gear-card{
+      display:flex;
+      align-items:flex-start;
+      gap:16px;
+      padding:20px;
+      border-radius:20px;
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:var(--shadow);
+      transition:.2s ease;
+    }
+    .gear-card:hover{
+      transform:translateY(-2px);
+      border-color:rgba(0,201,167,.18);
+    }
+    .gear-icon{
+      width:58px;height:58px;
+      border-radius:16px;
+      display:grid;place-items:center;
+      color:var(--accent-2);
+      background:rgba(0,201,167,.07);
+      flex-shrink:0;
+    }
+    .gear-name{
+      font-size:1.05rem;
+      font-weight:800;
+      margin-bottom:6px;
+    }
+    .gear-desc{
+      color:var(--text-soft);
+      font-size:.95rem;
+    }
+    .note-box{
+      margin-top:24px;
+      padding:18px 22px;
+      display:flex;
+      align-items:flex-start;
+      gap:14px;
+      border:1px solid var(--line-strong);
+      background:rgba(0,201,167,.05);
+      border-radius:18px;
+    }
+
+    /* Guides */
+    .guide-card{
+      padding:22px;
+      border-radius:22px;
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:var(--shadow);
+    }
+    .guide-category{
+      color:var(--accent-2);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-size:.76rem;
+      font-weight:800;
+      margin-bottom:10px;
+    }
+    .guide-title{
+      margin:0 0 10px;
+      font-size:1.18rem;
+    }
+    .guide-excerpt{
+      margin:0 0 14px;
+      color:var(--text-soft);
+    }
+    .guide-meta{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+      color:var(--text-muted);
+      font-size:.88rem;
+    }
+
+    /* Newsletter / CTA */
+    .newsletter-section{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:24px;
+      align-items:center;
+      padding:34px;
+      border-radius:28px;
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:var(--shadow);
+      background:
+        radial-gradient(circle at left top, rgba(0,201,167,.14), transparent 28%),
+        linear-gradient(180deg, #0d1823, #101d2a);
+    }
+    .newsletter-form{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .newsletter-input{
+      flex:1 1 240px;
+      min-width:240px;
+      min-height:50px;
+      padding:14px 16px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background:#08131d;
+      color:#fff;
+      outline:none;
+    }
+
+    /* Trust */
+    .trust-block{
+      padding:24px;
+      border-radius:22px;
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:var(--shadow);
+    }
+    .trust-icon{
+      width:54px;height:54px;
+      border-radius:16px;
+      display:grid;place-items:center;
+      background:rgba(0,201,167,.08);
+      color:var(--accent-2);
+      margin-bottom:16px;
+    }
+    .trust-title{
+      font-size:1.08rem;
+      font-weight:800;
+      margin-bottom:8px;
+    }
+    .trust-text{
+      margin:0;
+      color:var(--text-soft);
+    }
+
+    .cta-section{
+      position:relative;
+      text-align:center;
+      padding:92px 0;
+      overflow:hidden;
+    }
+    .cta-section p{
+      max-width:760px;
+      margin:16px auto 0;
+      color:var(--text-soft);
+      font-size:1.08rem;
+    }
+    .cta-buttons{
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:26px;
+    }
+
+    /* Footer */
+    .site-footer{
+      padding:50px 0 70px;
+      border-top:1px solid rgba(255,255,255,.06);
+      background:rgba(0,0,0,.10);
+    }
+    .footer-top{
+      display:grid;
+      grid-template-columns:1.2fr .8fr .8fr .8fr;
+      gap:24px;
+    }
+    .footer-col-title{
+      font-size:1rem;
+      font-weight:800;
+      margin-bottom:14px;
+    }
+    .footer-links{
+      display:grid;
+      gap:10px;
+    }
+    .footer-link{
+      color:var(--text-soft);
+      font-size:.95rem;
+    }
+    .footer-link:hover{color:#fff}
+    .footer-brand{
+      font-size:1.5rem;
+      font-weight:900;
+      letter-spacing:.08em;
+      margin-bottom:10px;
+    }
+    .footer-brand span{color:var(--accent)}
+    .footer-brand-col p{
+      color:var(--text-soft);
+      margin:0 0 18px;
+    }
+    .footer-social{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .social-btn{
+      width:42px;height:42px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.10);
+      display:grid;place-items:center;
+      color:#fff;
+      background:rgba(255,255,255,.03);
+    }
+    .footer-bottom{
+      margin-top:28px;
+      padding-top:20px;
+      border-top:1px solid rgba(255,255,255,.06);
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      color:var(--text-muted);
+      font-size:.9rem;
+    }
+
+    .mobile-sticky-cta{
+      display:none;
+      position:fixed;
+      left:12px;right:12px;bottom:12px;
+      z-index:1100;
+      gap:10px;
+      padding:10px;
+      border-radius:18px;
+      background:rgba(6,12,18,.88);
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 20px 40px rgba(0,0,0,.38);
+    }
+
+    /* Responsive */
+    @media (max-width:1100px){
+      .hero-grid,
+      .newsletter-section,
+      .footer-top,
+      .grid-4,
+      .grid-3{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media (max-width:860px){
+      .header-nav,
+      .header-cta-desktop{display:none}
+      .mobile-menu-btn{display:flex}
+      .hero-grid,
+      .grid-4,
+      .grid-3,
+      .grid-2,
+      .footer-top,
+      .newsletter-section,
+      .hero-stats{
+        grid-template-columns:1fr;
+      }
+      .section{padding:72px 0}
+      .hero-section{padding-top:56px}
+      .hero-card{min-height:440px}
+      .section-header{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      .newsletter-form{justify-content:flex-start}
+      .mobile-sticky-cta{display:flex}
+      body{padding-bottom:86px}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="header-logo">
+        <span class="logo-badge">E</span>
+        <span>EGING</span>
+      </a>
+
+      <nav class="header-nav">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#poteras" class="nav-link">Poteras artesanas</a>
+        <a href="#ropa" class="nav-link">Ropa</a>
+        <a href="#material" class="nav-link">Material recomendado</a>
+        <a href="#guias" class="nav-link">Guías de eging</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+
+      <a href="#material" class="btn btn-primary header-cta-desktop">Ver material</a>
+
+      <button class="mobile-menu-btn" id="menuBtn" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="#inicio" class="mobile-nav-link">Inicio</a>
+      <a href="#poteras" class="mobile-nav-link">Poteras artesanas</a>
+      <a href="#ropa" class="mobile-nav-link">Ropa</a>
+      <a href="#material" class="mobile-nav-link">Material recomendado</a>
+      <a href="#guias" class="mobile-nav-link">Guías de eging</a>
+      <a href="#contacto" class="mobile-nav-link">Contacto</a>
+      <div style="margin-top:18px">
+        <a href="#material" class="btn btn-primary" style="width:100%">Ver material recomendado</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="section-label">Poteras artesanas · Ropa técnica · Material probado</span>
+          <h1 class="section-title">EGING real,<br>material probado<br><span style="color:var(--accent-2)">y poteras artesanas</span><br>con identidad propia</h1>
+          <p class="section-subtitle">
+            EGING es tu espacio sobre pesca de calamares: material recomendado, guías útiles, ropa personalizada y poteras artesanas fabricadas por NEKO LURES.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#poteras" class="btn btn-primary">Ver poteras artesanas</a>
+            <a href="#material" class="btn btn-outline">Explorar material recomendado</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>100%</strong>
+              <span>Fabricación artesanal</span>
+            </div>
+            <div class="stat">
+              <strong>+8 años</strong>
+              <span>Experiencia en eging</span>
+            </div>
+            <div class="stat">
+              <strong>Selección</strong>
+              <span>Real y con criterio</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-badge">by NEKO LURES</div>
+          <div class="hero-overlay">
+            <div class="hero-panel">
+              <strong>Poteras artesanas</strong>
+              <p>Piezas hechas a mano en tiradas cortas, con patrones propios y acabados pensados para pescar de verdad.</p>
+            </div>
+            <div class="hero-panel">
+              <strong>Material recomendado</strong>
+              <p>Selección útil de cañas, carretes, líneas, accesorios y poteras basada en experiencia real en el agua.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-label">Por qué EGING</span>
+            <h2 class="section-title">Criterio técnico, producto propio y comunidad real</h2>
+            <p class="section-subtitle">La web gira alrededor del eging como modalidad, mientras NEKO LURES firma las poteras, la ropa y la identidad de producto.</p>
+          </div>
+        </div>
+
+        <div class="grid-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="number">01</div>
+              <h3>Fabricación artesanal</h3>
+              <p>Las poteras de NEKO LURES salen de tus manos: pintadas, equilibradas y pensadas para pescadores que valoran lo artesanal.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <div class="number">02</div>
+              <h3>Criterio técnico</h3>
+              <p>Se recomienda material que funciona en condiciones reales, no lo que más paga. Primero se prueba, luego se recomienda.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <div class="number">03</div>
+              <h3>Identidad propia</h3>
+              <p>NEKO LURES / NK firma productos con estilo propio: poteras, ropa y diseños que no son copia de catálogo.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <div class="number">04</div>
+              <h3>Comunidad real</h3>
+              <p>EGING reúne guías, experiencia real y contenido para gente que pesca calamares de verdad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="poteras">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-label">Poteras artesanas</span>
+            <h2 class="section-title">Hechas a mano.<br>Probadas en agua.</h2>
+            <p class="section-subtitle">Tiradas cortas. Patrones propios. Cada modelo responde a lo que el calamar quiere, no a lo que el mercado fabrica en serie.</p>
+          </div>
+          <a href="#contacto" class="btn btn-ghost">Consultar disponibilidad</a>
+        </div>
+
+        <div class="grid-4">
+          <article class="card">
+            <div class="product-media">
+              <span class="product-tag">Más vendida</span>
+              <svg class="placeholder-svg" viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <radialGradient id="g1" cx="50%" cy="40%" r="60%">
+                    <stop offset="0%" stop-color="#00c9a7" stop-opacity="0.45"></stop>
+                    <stop offset="100%" stop-color="#002d26" stop-opacity="0"></stop>
+                  </radialGradient>
+                </defs>
+                <ellipse cx="100" cy="80" rx="30" ry="55" fill="none" stroke="#00c9a7" stroke-width="1.2" opacity="0.9"></ellipse>
+                <ellipse cx="100" cy="80" rx="18" ry="42" fill="#005a4a" opacity="0.3"></ellipse>
+                <ellipse cx="100" cy="80" rx="30" ry="55" fill="url(#g1)"></ellipse>
+                <circle cx="100" cy="48" r="5" fill="#00c9a7"></circle>
+                <line x1="100" y1="43" x2="100" y2="22" stroke="#00c9a7" stroke-width="1.2" stroke-linecap="round"></line>
+                <path d="M82 128 L72 150 M100 132 L100 155 M118 128 L128 150" stroke="#00c9a7" stroke-width="1.4" stroke-linecap="round" opacity="0.75"></path>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>NEKO Shadow Cat 3.5</h3>
+              <p>Terminada en resina epoxi sobre base blanca. Patrón fosforescente de activación rápida para profundidades medias.</p>
+              <div class="product-footer">
+                <span class="small">Modelo artesanal</span>
+                <a href="#contacto" class="btn btn-outline">Consultar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="product-media">
+              <span class="product-tag tag-new">Nueva</span>
+              <svg class="placeholder-svg" viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <radialGradient id="g2" cx="50%" cy="40%" r="60%">
+                    <stop offset="0%" stop-color="#1e40af" stop-opacity="0.45"></stop>
+                    <stop offset="100%" stop-color="#060d26" stop-opacity="0"></stop>
+                  </radialGradient>
+                </defs>
+                <ellipse cx="100" cy="80" rx="30" ry="55" fill="none" stroke="#1e40af" stroke-width="1.2" opacity="0.9"></ellipse>
+                <ellipse cx="100" cy="80" rx="18" ry="42" fill="#0a1f5c" opacity="0.3"></ellipse>
+                <ellipse cx="100" cy="80" rx="30" ry="55" fill="url(#g2)"></ellipse>
+                <circle cx="100" cy="48" r="5" fill="#1e40af"></circle>
+                <line x1="100" y1="43" x2="100" y2="22" stroke="#1e40af" stroke-width="1.2" stroke-linecap="round"></line>
+                <path d="M82 128 L72 150 M100 132 L100 155 M118 128 L128 150" stroke="#1e40af" stroke-width="1.4" stroke-linecap="round" opacity="0.75"></path>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>NEKO Abyssal 4.0</h3>
+              <p>Diseño oscuro con destellos para aguas turbias. Hundimiento rápido y perfil pensado para escenarios exigentes.</p>
+              <div class="product-footer">
+                <span class="small">25 g aprox.</span>
+                <a href="#contacto" class="btn btn-outline">Consultar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="product-media">
+              <span class="product-tag tag-limited">Edición limitada</span>
+              <svg class="placeholder-svg" viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <radialGradient id="g3" cx="50%" cy="40%" r="60%">
+                    <stop offset="0%" stop-color="#d42b3a" stop-opacity="0.45"></stop>
+                    <stop offset="100%" stop-color="#2a070c" stop-opacity="0"></stop>
+                  </radialGradient>
+                </defs>
+                <ellipse cx="100" cy="80" rx="30" ry="55" fill="none" stroke="#d42b3a" stroke-width="1.2" opacity="0.9"></ellipse>
+                <ellipse cx="100" cy="80" rx="18" ry="42" fill="#6b1520" opacity="0.3"></ellipse>
+                <ellipse cx="100" cy="80" rx="30" ry="55" fill="url(#g3)"></ellipse>
+                <circle cx="100" cy="48" r="5" fill="#d42b3a"></circle>
+                <line x1="100" y1="43" x2="100" y2="22" stroke="#d42b3a" stroke-width="1.2" stroke-linecap="round"></line>
+                <path d="M82 128 L72 150 M100 132 L100 155 M118 128 L128 150" stroke="#d42b3a" stroke-width="1.4" stroke-linecap="round" opacity="0.75"></path>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>NEKO Red Line 3.0</h3>
+              <p>Patrón rojo-naranja inspirado en presa pelágica. Alta visibilidad en aguas limpias y sesiones activas.</p>
+              <div class="product-footer">
+                <span class="small">Tirada corta</span>
+                <a href="#contacto" class="btn btn-outline">Consultar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="product-media">
+              <svg class="placeholder-svg" viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <radialGradient id="g4" cx="50%" cy="40%" r="60%">
+                    <stop offset="0%" stop-color="#7dd3fc" stop-opacity="0.45"></stop>
+                    <stop offset="100%" stop-color="#091826" stop-opacity="0"></stop>
+                  </radialGradient>
+                </defs>
+                <ellipse cx="100" cy="80" rx="30" ry="55" fill="none" stroke="#7dd3fc" stroke-width="1.2" opacity="0.9"></ellipse>
+                <ellipse cx="100" cy="80" rx="18" ry="42" fill="#1e4a6e" opacity="0.3"></ellipse>
+                <ellipse cx="100" cy="80" rx="30" ry="55" fill="url(#g4)"></ellipse>
+                <circle cx="100" cy="48" r="5" fill="#7dd3fc"></circle>
+                <line x1="100" y1="43" x2="100" y2="22" stroke="#7dd3fc" stroke-width="1.2" stroke-linecap="round"></line>
+                <path d="M82 128 L72 150 M100 132 L100 155 M118 128 L128 150" stroke="#7dd3fc" stroke-width="1.4" stroke-linecap="round" opacity="0.75"></path>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>NEKO Ghost Pearl 3.5</h3>
+              <p>Acabado nacarado con activación glow azul. Muy útil en últimas luces y zonas con agua tomada.</p>
+              <div class="product-footer">
+                <span class="small">Glow azul</span>
+                <a href="#contacto" class="btn btn-outline">Consultar</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="note-box">
+          <div style="color:var(--accent-2);flex-shrink:0;">
+            <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.6"></circle>
+              <path d="M10 9V13M10 6.4V6.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+            </svg>
+          </div>
+          <p style="margin:0;color:var(--text-soft)">Las poteras NEKO son piezas artesanales en tiradas cortas. La disponibilidad puede variar según modelos y colores.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ropa">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-label">Ropa personalizada NK / NEKO LURES</span>
+            <h2 class="section-title">Lleva el eging<br>puesto.</h2>
+            <p class="section-subtitle">Camisetas, sudaderas y diseños personalizados de NK / NEKO LURES para quienes viven el eging dentro y fuera del agua.</p>
+          </div>
+          <a href="#contacto" class="btn btn-ghost">Pedir información</a>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="product-media">
+              <svg class="apparel-placeholder" viewBox="0 0 180 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M60 40 L20 80 L50 90 L50 180 L130 180 L130 90 L160 80 L120 40 L100 55 C90 65 70 65 60 40Z" fill="none" stroke="#00c9a7" stroke-width="1.4"></path>
+                <path d="M80 40 Q90 30 100 40" fill="none" stroke="#00c9a7" stroke-width="1.2" stroke-linecap="round"></path>
+                <text x="90" y="130" text-anchor="middle" font-size="16" fill="#00c9a7" opacity="0.7" letter-spacing="2">NEKO</text>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>Camiseta Shadow Cat</h3>
+              <p>Algodón de buena calidad, serigrafía cuidada y diseño limpio con identidad NK.</p>
+              <div class="product-footer">
+                <span class="small">Tallas M – XXL</span>
+                <a href="#contacto" class="btn btn-outline">Ver tallas</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="product-media">
+              <svg class="apparel-placeholder" viewBox="0 0 180 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M60 40 L20 80 L50 90 L50 180 L130 180 L130 90 L160 80 L120 40 L100 55 C90 65 70 65 60 40Z" fill="none" stroke="#7dd3fc" stroke-width="1.4"></path>
+                <path d="M80 40 Q90 30 100 40" fill="none" stroke="#7dd3fc" stroke-width="1.2" stroke-linecap="round"></path>
+                <text x="90" y="130" text-anchor="middle" font-size="16" fill="#7dd3fc" opacity="0.7" letter-spacing="2">NEKO</text>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>Sudadera Deep Sea</h3>
+              <p>Perfecta para madrugadas frescas, salidas en costa y quienes quieren una prenda con presencia real.</p>
+              <div class="product-footer">
+                <span class="small">Tallas S – XXL</span>
+                <a href="#contacto" class="btn btn-outline">Ver tallas</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="product-media">
+              <svg class="apparel-placeholder" viewBox="0 0 180 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M60 40 L20 80 L50 90 L50 180 L130 180 L130 90 L160 80 L120 40 L100 55 C90 65 70 65 60 40Z" fill="none" stroke="#00c9a7" stroke-width="1.4"></path>
+                <path d="M80 40 Q90 30 100 40" fill="none" stroke="#00c9a7" stroke-width="1.2" stroke-linecap="round"></path>
+                <text x="90" y="130" text-anchor="middle" font-size="16" fill="#00c9a7" opacity="0.7" letter-spacing="2">NK</text>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>Ropa personalizada NK</h3>
+              <p>Camisetas, sudaderas y otros formatos personalizados con tus diseños o ideas de marca.</p>
+              <div class="product-footer">
+                <span class="small">Personalizable</span>
+                <a href="#contacto" class="btn btn-outline">Consultar</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="material">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-label">Material recomendado</span>
+            <h2 class="section-title">Recomendamos lo que<br>nosotros usaríamos.</h2>
+            <p class="section-subtitle">Selección de material recomendada con criterio real de pesca. Algunas recomendaciones pueden incluir enlaces de afiliado, siempre sin coste extra para ti.</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <a href="#" class="gear-card">
+            <div class="gear-icon">
+              <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <line x1="8" y1="40" x2="42" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                <circle cx="12" cy="36" r="2.5" stroke="currentColor" stroke-width="1.5"></circle>
+                <circle cx="20" cy="28" r="2" stroke="currentColor" stroke-width="1.5"></circle>
+                <circle cx="28" cy="20" r="1.5" stroke="currentColor" stroke-width="1.4"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="gear-name">Cañas</div>
+              <div class="gear-desc">De 2,4 a 3,0 m. Acción, potencia y rango de gramos según tipo de pesca.</div>
+            </div>
+          </a>
+
+          <a href="#" class="gear-card">
+            <div class="gear-icon">
+              <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="22" cy="26" r="14" stroke="currentColor" stroke-width="1.8"></circle>
+                <circle cx="22" cy="26" r="6" stroke="currentColor" stroke-width="1.4"></circle>
+                <path d="M36 26H42M38 14L42 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="gear-name">Carretes</div>
+              <div class="gear-desc">Relación de recuperación, peso y construcción para eging intensivo.</div>
+            </div>
+          </a>
+
+          <a href="#" class="gear-card">
+            <div class="gear-icon">
+              <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M8 8C8 8 20 14 24 24C28 34 40 40 40 40" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M14 12C14 12 22 18 24 24C26 30 34 36 34 36" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.5"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="gear-name">Trenzados</div>
+              <div class="gear-desc">PE 0.4 a PE 1.0. Selección por diámetro real, sensibilidad y resistencia.</div>
+            </div>
+          </a>
+
+          <a href="#" class="gear-card">
+            <div class="gear-icon">
+              <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M8 8L40 40" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 3"></path>
+                <path d="M8 40L40 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                <circle cx="24" cy="24" r="3" fill="currentColor" opacity="0.5"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="gear-name">Bajos y fluorocarbono</div>
+              <div class="gear-desc">Longitud, rigidez y transparencia para no complicar la presentación.</div>
+            </div>
+          </a>
+
+          <a href="#" class="gear-card">
+            <div class="gear-icon">
+              <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <ellipse cx="24" cy="22" rx="8" ry="14" stroke="currentColor" stroke-width="1.8"></ellipse>
+                <path d="M20 36L16 44M24 36L24 44M28 36L32 44" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
+                <circle cx="24" cy="14" r="2" fill="currentColor"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="gear-name">Poteras</div>
+              <div class="gear-desc">Referencias elegidas por acción, fiabilidad de gancho y comportamiento real.</div>
+            </div>
+          </a>
+
+          <a href="#" class="gear-card">
+            <div class="gear-icon">
+              <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="20" cy="20" r="8" stroke="currentColor" stroke-width="1.8"></circle>
+                <path d="M26 26L38 38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"></path>
+                <circle cx="20" cy="20" r="3" stroke="currentColor" stroke-width="1.4"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="gear-name">Accesorios</div>
+              <div class="gear-desc">Giradillas, medidores, fijadores y complementos que realmente se usan.</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="note-box">
+          <div style="color:var(--accent-2);flex-shrink:0;">
+            <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 10L8 14L16 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <p style="margin:0;color:var(--text-soft)">
+            <strong style="color:var(--text)">Nota editorial:</strong> algunas recomendaciones de esta sección pueden incluir enlaces de afiliado. Eso no cambia la selección ni supone un coste extra para ti.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="guias" style="background:rgba(255,255,255,.01)">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-label">Guías de eging</span>
+            <h2 class="section-title">Contenido que<br>ayuda de verdad.</h2>
+            <p class="section-subtitle">Artículos técnicos escritos desde la experiencia, no desde el ruido. Para aprender eging como se aprende en el agua.</p>
+          </div>
+          <a href="#contacto" class="btn btn-ghost">Proponer tema</a>
+        </div>
+
+        <div class="grid-2">
+          <article class="guide-card">
+            <div class="guide-category">Poteras</div>
+            <h3 class="guide-title">Cómo elegir una potera para eging</h3>
+            <p class="guide-excerpt">Talla, peso, tipo de hundimiento y color. Lo que conviene entender antes de comprar por impulso.</p>
+            <div class="guide-meta">
+              <span>8 min lectura</span>
+              <span>•</span>
+              <span>Guía base</span>
+            </div>
+          </article>
+
+          <article class="guide-card">
+            <div class="guide-category">Técnica</div>
+            <h3 class="guide-title">Color o acción: qué influye más en el calamar</h3>
+            <p class="guide-excerpt">Una explicación clara para separar mitos, manías y situaciones donde cada factor realmente importa.</p>
+            <div class="guide-meta">
+              <span>6 min lectura</span>
+              <span>•</span>
+              <span>Técnica</span>
+            </div>
+          </article>
+
+          <article class="guide-card">
+            <div class="guide-category">Equipación</div>
+            <h3 class="guide-title">Qué caña elegir para empezar en eging</h3>
+            <p class="guide-excerpt">Rango EGI, longitud y acción explicados de forma útil y sin tecnicismos innecesarios.</p>
+            <div class="guide-meta">
+              <span>10 min lectura</span>
+              <span>•</span>
+              <span>Iniciación</span>
+            </div>
+          </article>
+
+          <article class="guide-card">
+            <div class="guide-category">Líneas</div>
+            <h3 class="guide-title">Trenzado fino o grueso para calamar</h3>
+            <p class="guide-excerpt">Cuándo merece la pena afinar diámetro y cuándo solo estás complicando más de la cuenta tu equipo.</p>
+            <div class="guide-meta">
+              <span>7 min lectura</span>
+              <span>•</span>
+              <span>Setup</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="newsletter-section">
+          <div>
+            <span class="section-label">Comunidad EGING</span>
+            <h3 style="font-size:2rem;margin:0 0 12px;">Contenido, lanzamientos y novedades</h3>
+            <p class="muted" style="margin:0;max-width:500px;">
+              Sin spam. Solo novedades sobre eging, nuevas guías, material recomendado y lanzamientos de NEKO LURES.
+            </p>
+          </div>
+
+          <div>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Aquí puedes conectar más adelante tu formulario real o tu email.');">
+              <input class="newsletter-input" type="email" placeholder="tu@email.es" aria-label="Correo electrónico">
+              <button class="btn btn-primary" type="submit">Suscribirme</button>
+            </form>
+            <p class="small" style="margin-top:10px;">Darte de baja cuando quieras. Sin compromisos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="nosotros">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:42px;">
+          <span class="section-label">Por qué confiar en EGING</span>
+          <h2 class="section-title" style="margin-bottom:0;">No es solo una web.<br>Es eging real.</h2>
+        </div>
+
+        <div class="grid-4">
+          <div class="trust-block">
+            <div class="trust-icon">
+              <svg width="30" height="30" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M8 36L22 8L36 36" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M13 26H31" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+                <circle cx="22" cy="14" r="2" fill="currentColor"></circle>
+              </svg>
+            </div>
+            <div class="trust-title">Fabricación artesanal</div>
+            <p class="trust-text">Cada potera NEKO es pintada, acabada y equilibrada a mano. No es una marca de catálogo.</p>
+          </div>
+
+          <div class="trust-block">
+            <div class="trust-icon">
+              <svg width="30" height="30" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16 8V26L10 38H34L28 26V8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M14 8H30" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                <circle cx="24" cy="32" r="2.5" fill="currentColor" opacity="0.7"></circle>
+              </svg>
+            </div>
+            <div class="trust-title">Material probado</div>
+            <p class="trust-text">Solo se recomienda lo que realmente tendría sentido usar en una jornada real de eging.</p>
+          </div>
+
+          <div class="trust-block">
+            <div class="trust-icon">
+              <svg width="30" height="30" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="22" cy="22" r="14" stroke="currentColor" stroke-width="1.8"></circle>
+                <path d="M22 8V22L30 30" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+                <circle cx="22" cy="22" r="3" fill="currentColor"></circle>
+              </svg>
+            </div>
+            <div class="trust-title">Diseños con identidad</div>
+            <p class="trust-text">Los patrones de NEKO LURES nacen del agua, la experiencia y una estética propia.</p>
+          </div>
+
+          <div class="trust-block">
+            <div class="trust-icon">
+              <svg width="30" height="30" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M8 16V8H16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M36 16V8H28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M8 28V36H16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M36 28V36H28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                <circle cx="22" cy="22" r="5" stroke="currentColor" stroke-width="1.8"></circle>
+              </svg>
+            </div>
+            <div class="trust-title">Enfoque honesto</div>
+            <p class="trust-text">Sin humo. Si algo no merece la pena, no se recomienda. Si funciona, se explica por qué.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:620px;height:620px;background:radial-gradient(circle, rgba(0,201,167,.09) 0%, transparent 70%);border-radius:50%;filter:blur(30px);pointer-events:none"></div>
+      <div class="container" style="position:relative;z-index:2;">
+        <span class="section-label">Empieza aquí</span>
+        <h2 class="section-title">El eging que<br>mereces pescar.</h2>
+        <p>Guías, material recomendado, poteras artesanas de NEKO LURES y ropa personalizada. Todo en un solo sitio, sin humo.</p>
+        <div class="cta-buttons">
+          <a href="#poteras" class="btn btn-primary">Ver poteras artesanas</a>
+          <a href="#material" class="btn btn-outline">Ver material recomendado</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer" id="contacto">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand-col">
+            <div class="footer-brand">EGING</div>
+            <p>Web sobre pesca de calamares con guías, material recomendado y productos artesanales de NEKO LURES.</p>
+
+            <div class="footer-social">
+              <a href="#" class="social-btn" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" class="social-btn" aria-label="YouTube">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.41 19.1C5.12 19.55 12 19.55 12 19.55s6.88 0 8.59-.45a2.78 2.78 0 0 0 1.95-1.97 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.46z"></path>
+                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
+              </a>
+              <a href="#" class="social-btn" aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-col-title">Tienda</div>
+            <div class="footer-links">
+              <a href="#poteras" class="footer-link">Poteras artesanas</a>
+              <a href="#ropa" class="footer-link">Ropa personalizada</a>
+              <a href="#material" class="footer-link">Material recomendado</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-col-title">Contenido</div>
+            <div class="footer-links">
+              <a href="#guias" class="footer-link">Guías de eging</a>
+              <a href="#guias" class="footer-link">Técnica y táctica</a>
+              <a href="#guias" class="footer-link">Reseñas de material</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-col-title">Información</div>
+            <div class="footer-links">
+              <a href="#nosotros" class="footer-link">Sobre EGING</a>
+              <a href="mailto:tuemail@correo.com" class="footer-link">Contacto</a>
+              <a href="#" class="footer-link">Política de privacidad</a>
+              <a href="#" class="footer-link">Aviso legal</a>
+              <a href="#" class="footer-link">Política de cookies</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 EGING — Todos los derechos reservados</p>
+          <p>Hecho en España · <span style="color:var(--accent-2)">Poteras artesanas by NEKO LURES</span></p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="mobile-sticky-cta">
+      <a href="#poteras" class="btn btn-primary" style="flex:1">Ver poteras</a>
+      <a href="#material" class="btn btn-outline" style="flex:1">Ver material</a>
+    </div>
+  </main>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+        });
+      });
+    }
+  </script>
+</body>
+</html>
 
